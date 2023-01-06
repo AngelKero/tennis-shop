@@ -1,0 +1,88 @@
+/// @content Generate `:hover` and `:focus` styles in one go.
+@mixin hocus {
+    &:focus,
+    &:hover {
+        @content;
+    }
+}
+
+/// @content Generate `:active` and `:focus` styles in one go.
+@mixin actus {
+    &:focus,
+    &:active {
+        @content;
+    }
+}
+
+/// @content Prevent text from wrapping into multiple lines for the current element.
+@mixin truncate($width: 100%) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal; // [2]
+    @if $width {
+        max-width: $width; // [1]
+    }
+}
+
+/// @content A generator that makes working with media queries effortless and fun.
+@mixin mq($alias) {
+    // Search breakpoint map for alias
+    $query: map-get($theme-breakpoints-queries, $alias);
+    // If alias exists, print out media query
+    @if $query {
+        @media #{$query} {
+        @content;
+        }
+    } @else {
+        @error "No breakpoint found for #{$alias}";
+    }
+}
+
+/// @content A mixin that makes elements fluid in there containers.
+@mixin fluid() {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+// Media query mixins
+
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@mixin mq-up($name, $breakpoints: $breakpoints) {
+    $min: breakpoint-min($name, $breakpoints);
+
+    @if $min {
+        @media screen and (min-width: $min) {
+          @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+// Makes the @content apply to the given breakpoint and narrower.
+@mixin mq-down($name, $breakpoints: $breakpoints) {
+    $max: breakpoint-max($name, $breakpoints);
+
+    @if $max {
+        @media screen and (max-width: $max) {
+        @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+// Media between the breakpoint's minimum and maximum widths.
+// No minimum for the smallest breakpoint, and no maximum for the largest one.
+// Makes the @content apply only to the given breakpoint, not viewports any wider or narrower.
+@mixin mq-only($name, $breakpoints: $breakpoints) {
+    @include mq-up($name, $breakpoints) {
+        @include mq-down($name, $breakpoints) {
+        @content;
+        }
+    }
+}
