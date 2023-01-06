@@ -1,0 +1,10 @@
+/// You can import this file on your component where you need to
+/// access the variables and mixins.
+/// @example @import 'general';
+
+@import './config/breakpoints';
+@import './config/colors';
+@import './config/text';
+
+@import './tools/functions';
+@import './tools/mixins';
