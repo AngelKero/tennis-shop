@@ -1,0 +1,143 @@
+@import 'general';
+@import "swiper/scss";
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+
+:host{
+  display: grid;
+  grid-template-columns: 530px 1fr;
+  overflow: hidden;
+  @include mq-down('md'){
+    grid-template-columns: 1fr;
+  }
+
+  .backgroud{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &_image{
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      user-select: none;
+      position: relative;
+      z-index: 0;
+      object-fit: cover;
+      @include mq-down('md'){
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    &_content{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 2rem;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include mq-down('md'){
+        position: relative;
+      }
+      h2, p{
+        padding-left: 36%;
+        margin-bottom: 1.5rem;
+        @include mq-down('md'){
+          padding: 0 1rem;
+        }
+      }
+      h2{
+        @extend %text-style-2;
+        span{
+          font-weight: 700;
+        }
+      }
+      p{
+        @extend %text-style-15;
+      }
+      .pagination{
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        button{
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: $white-secondary;
+          &.-active{
+            background-color: $sickly-yellow;
+          }
+        }
+      }
+      .actions{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        button{
+          width: 54px;
+          height: 54px;
+          border-radius: 50%;
+          color: $white-primary;
+          background-color: $sickly-yellow;
+          border: 1px solid $sickly-yellow;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.75);
+          img{
+            width: 10px;
+            transform: translateX(2px);
+          }
+          &:first-child{
+            transform: rotateY(180deg);
+            box-shadow: -2px 3px 7px 0px rgba(black, 0.5);
+          }
+          &:disabled{
+            color: $white-primary;
+            box-shadow: none;
+            border-color: $white-primary;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .products{
+    width: calc(100vw - 530px - 2rem);
+    padding: 3rem 1rem 4rem 3rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    @include mq-down('md'){
+      width: 100vw;
+      padding: 2rem 1rem;
+    }
+    ::ng-deep{
+      .product{
+        position: relative;
+
+        &_counter{
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $sickly-yellow;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          color: $white-primary;
+        }
+      }
+    }
+  }
+}

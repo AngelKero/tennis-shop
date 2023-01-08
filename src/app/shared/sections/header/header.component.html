@@ -1,1 +1,24 @@
-<p>header works!</p>
+<div class="left">
+  <div class="logo">
+    <img src="assets/icons/logo.svg" alt="logo" />
+  </div>
+
+  <nav class="navigation">
+    <a class="link -active" href="#">Inicio</a>
+    <a class="link" href="#aboutUs">Acerca de nosotros</a>
+    <a class="link" href="#history">Historia</a>
+    <a class="link" href="#contact">Contacto</a>
+  </nav>
+</div>
+
+<div class="right">
+  <div class="languagues">
+    <a class="link -active" href="#">Es</a>
+    <a class="link" href="#">En</a>
+  </div>
+  <div class="mobile">
+    <button class="burger" (click)="openSideNav()">
+      <img src="assets/icons/bars-solid.svg" alt="burger" aria-label="burger">
+    </button>
+  </div>
+</div>

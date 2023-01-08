@@ -1,1 +1,29 @@
-<p>products-carousel works!</p>
+<div class="backgroud">
+  <img class="backgroud_image" src="assets/images/ball-color-court.png" alt="Imagen de fondo">
+
+  <div class="backgroud_content">
+    <h2>
+      Nuestras <br>
+      <span>Raquetas</span>
+    </h2>
+    <p>Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional.</p>
+    <div #pagination class="pagination">
+      <button *ngFor="let i of [1,2,3,4]" (click)="goto(i)" class="bullet" [ngClass]="{
+        '-active': i === slideActive
+      }"></button>
+    </div>
+    <div class="actions">
+      <button (click)="slidePrev()" [disabled]="slideActive <= 1"><img src="assets/icons/bullet.svg"></button>
+      <button (click)="slideNext()" [disabled]="slideActive === 4"><img src="assets/icons/bullet.svg"></button>
+    </div>
+  </div>
+</div>
+
+<div class="products">
+  <swiper #swiper [config]="config" (slideChange)="onSlideChange()">
+    <ng-template class="product" swiperSlide *ngFor="let i of [1,2,3,4]">
+      <span class="product_counter">{{ i }}</span>
+      <img class="product_image" src="assets/images/raqueta.jpg" alt="Raqueta {{i}}">
+    </ng-template>
+  </swiper>
+</div>

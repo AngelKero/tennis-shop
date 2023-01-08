@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tennis-shop';
+
+  isMenuOpen = false;
+
+  openMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
 }

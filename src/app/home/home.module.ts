@@ -7,6 +7,7 @@ import { BannerComponent } from './containers/banner/banner.component';
 import { LargeImageComponent } from './containers/large-image/large-image.component';
 import { ProductsCarouselComponent } from './containers/products-carousel/products-carousel.component';
 import { AboutUsComponent } from './containers/about-us/about-us.component';
+import { SwiperModule } from 'swiper/angular';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { AboutUsComponent } from './containers/about-us/about-us.component';
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    SwiperModule
   ]
 })
 export class HomeModule { }

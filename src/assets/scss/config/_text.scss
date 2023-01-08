@@ -11,28 +11,6 @@
   color: $white-primary;
 }
 
-%text-style-14 {
-  font-family: 'HelveticaNeue';
-  font-size: 50px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.28;
-  letter-spacing: -0.06px;
-  color: $white-primary;
-}
-
-%text-style-4 {
-  font-family: 'HelveticaNeue';
-  font-size: 50px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.14;
-  letter-spacing: -0.06px;
-  color: $dark-primary;
-}
-
 %text-style-2 {
   font-family: 'HelveticaNeue';
   font-size: 50px;
@@ -55,14 +33,36 @@
   color: $text-primary;
 }
 
-%text-style-15 {
+%text-style-4 {
   font-family: 'HelveticaNeue';
-  font-size: 18px;
+  font-size: 50px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.67;
-  letter-spacing: 0.51px;
+  line-height: 1.14;
+  letter-spacing: -0.06px;
+  color: $dark-primary;
+}
+
+%text-style-5 {
+  font-family: 'HelveticaNeue';
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.14px;
+  color: $white-primary;
+}
+
+%text-style-9 {
+  font-family: 'HelveticaNeue';
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.14px;
   color: $white-primary;
 }
 
@@ -74,6 +74,17 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: 1.4px;
+  color: $white-primary;
+}
+
+%text-style-11 {
+  font-family: 'HelveticaNeue';
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.15;
+  letter-spacing: 1.01px;
   color: $white-primary;
 }
 
@@ -89,28 +100,6 @@
   color: $sickly-yellow;
 }
 
-%text-style-9 {
-  font-family: 'HelveticaNeue';
-  font-size: 13px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 1.14px;
-  color: $white-primary;
-}
-
-%text-style-11 {
-  font-family: 'HelveticaNeue';
-  font-size: 13px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 2.15;
-  letter-spacing: 1.01px;
-  color: $white-primary;
-}
-
 %text-style-13 {
   font-family: 'HelveticaNeue';
   font-size: 13px;
@@ -122,13 +111,24 @@
   color: #273048;
 }
 
-%text-style-5 {
+%text-style-14 {
   font-family: 'HelveticaNeue';
-  font-size: 13px;
+  font-size: 50px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.28;
+  letter-spacing: -0.06px;
+  color: $white-primary;
+}
+
+%text-style-15 {
+  font-family: 'HelveticaNeue';
+  font-size: 18px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: normal;
-  letter-spacing: 1.14px;
+  line-height: 1.67;
+  letter-spacing: 0.51px;
   color: $white-primary;
 }

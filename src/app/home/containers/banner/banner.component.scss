@@ -6,6 +6,41 @@
     position: relative;
     z-index: 0;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
+    min-height: 800px;
+    user-select: none;
+    pointer-events: none;
+    object-fit: cover;
+    object-position: center;
+    @include mq-down(sm) {
+      height: 100vh;
+      min-height: 600px;
+    }
+  }
+
+  .content{
+    position: absolute;
+    padding: 0;
+    top: 50%;
+    left: 0;
+    padding: 0 1rem 0 170px;
+    transform: translateY(-50%);
+    max-width: 850px;
+    @include mq-down(sm) {
+      padding: 1rem;
+    }
+    .title{
+      @extend %text-style-1;
+      font-weight: 500;
+      margin-bottom: 2.5rem;
+      span{
+        color: $sickly-yellow;
+        font-weight: 700;
+      }
+      @include mq-down(sm) {
+        font-size: 34px;
+        margin-bottom: 1.5rem;
+      }
+    }
   }
 }

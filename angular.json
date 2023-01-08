@@ -30,6 +30,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/swiper/swiper-bundle.css",
               "src/styles.scss"
             ],
             "stylePreprocessorOptions": {
@@ -108,5 +109,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "1c4c8436-5143-4c6b-9c4e-eb9da12afec7"
   }
 }
