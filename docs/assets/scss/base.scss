@@ -1,0 +1,18 @@
+/// This files defines the base styles for the project.
+/// Please don’t import this file if you need to use the variables and mixins in it.
+/// Instead, import "_general.scss" directly.
+
+/// - GENERAL
+/// An assortment of general variables and mixins to be used throughout the project.
+@import './general';
+
+/// - GENERIC
+/// Reset............A level playing field using @necolas’s Normalize.
+/// Elements.............Set some custom generic styles for elements.
+@import './generic/reset';
+@import './generic/elements';
+
+/// - COMPONENTS
+// Build and include your project’s UI components.
+// Uncomment and add to this as necessary.
+@import './components/button';
