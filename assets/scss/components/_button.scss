@@ -1,0 +1,27 @@
+.c-button{
+  @extend %text-style-13;
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  text-transform: uppercase;
+  width: max-content;
+  @include mq-down(xs) {
+    font-size: 11px;
+    padding: 0.75rem 1.5rem;
+  }
+  &:hover{
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &.-light{
+    color: $white-primary;
+    border: 1px solid $white-primary;
+    background-color: transparent;
+  }
+
+  &.-dark{
+    color: $dark-primary;
+    border: 1px solid $dark-primary;
+    background-color: transparent;
+  }
+}
